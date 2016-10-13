@@ -1,0 +1,16 @@
+1. What is Spatial Locality and why does it benefit performance?
+
+Answer:  Spatial Locality is when a package of files, array or a linked list is loaded from database and stored somewhere local(cache) "for easier access and faster loading time in the future".  The benefit of spatial locality is that the cache's system assumption that once a data from this group is accessed, it is possible that the datas that are next to each other may also be accessed in the future thus by storing them in the cache. This greatly reduces the loading time compared to having to search it in the database when it is needed.
+
+2.  Benchmark comparison
+
+       			user     system      total        real
+add_to_tail:  0.010000   0.000000   0.010000 (  0.004383)
+array push:   0.000000   0.000000   0.000000 (  0.003390)
+      					user     system      total        real
+Linkedlist search:    0.000000   0.000000   0.000000 (  0.000494)
+array search:  	      0.000000   0.000000   0.000000 (  0.000007)
+       					user     system      total        real
+destroy llist index:  0.000000   0.000000   0.000000 (  0.000767)
+array.delete:		  0.000000   0.000000   0.000000 (  0.000012)
+

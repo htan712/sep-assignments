@@ -89,4 +89,24 @@ RSpec.describe LinkedList, type: Class do
       expect(llist.head).to eq nil
     end
   end
+
+  describe "#destroyNode(index)" do
+    before do
+      llist.add_to_tail(n1)
+      llist.add_to_tail(n2)
+      llist.add_to_tail(n3)
+    end
+
+    it "removes the 0 index of list" do
+      llist.destroyNode(0)
+      expect(llist.head).to eq n2
+      expect(llist.tail).to eq n3
+    end
+
+    it "removes index 1 of list" do
+      llist.destroyNode(1)
+      expect(llist.head).to eq n1
+      expect(llist.tail).to eq n3
+    end
+  end
 end
