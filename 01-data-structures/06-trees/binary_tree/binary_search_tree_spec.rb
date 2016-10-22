@@ -168,8 +168,8 @@ RSpec.describe BinarySearchTree, type: Class do
       tree.insert(root, shawshank)
       tree.insert(root, district)
       tree.insert(root, mad_max_2)
-      tree.delete(root, inception.title)
-      expect(tree.find(root, inception.title)).to be_nil
+      tree.delete(root, hope.title)
+      expect(tree.find(root, hope.title)).to be_nil
     end
 
   end
