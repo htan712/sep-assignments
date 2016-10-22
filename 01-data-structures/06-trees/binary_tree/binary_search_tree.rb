@@ -1,6 +1,7 @@
 require_relative 'node'
 
 class BinarySearchTree
+  attr_reader :root
 
   def initialize(root)
     @root = root
@@ -85,7 +86,19 @@ class BinarySearchTree
 
   # Recursive Breadth First Search
   def printf(children=nil)
-
+    current = self.root
+    arr = [current]
+    while arr[0] != nil
+      print "#{arr[0].title}: #{arr[0].rating}\n"
+      if current.left
+        arr.push(current.left)
+      end
+      if current.right
+        arr.push(current.right)
+      end
+      arr.shift
+      current = arr[0]
+    end
   end
 
   def findMin(root)
