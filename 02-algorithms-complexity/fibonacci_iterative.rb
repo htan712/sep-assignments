@@ -1,9 +1,7 @@
 def fib(n)
-	fibarr = [0,1]
-	while fibarr.length <= n
-		fibarr.push(fibarr.reduce(:+))
-	end
-	return fibarr[n]
+	return 0 if n == 0
+	return 1 if n == 1
+	return fib(n-1) + fib(n-2)
 end
 
 puts fib(0)
