@@ -8,7 +8,7 @@ class MaxBinaryHeapTree
 	end
 
 	def insert(root, node)
-		current = self.root
+		current = root
 		arr = [current]
 		tempNode = nil
 		while tempNode == nil
