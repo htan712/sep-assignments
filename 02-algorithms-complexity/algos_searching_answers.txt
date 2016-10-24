@@ -1,0 +1,13 @@
+1.  Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+It will take 7 iterations using linear search to find G in a sorted collection.
+
+2.  Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+There are n=26 in alphabets, since arrays starts counting from 0, max length of arry will be n=26-1.  In the first iteration of binary search, n will be halved, and this goes on till we find G.  This is equivalent to log2(n), which will round off to 4 so it takes 4 guesses to find G.
+
+Calculate fib(10), fib(11), fib(12) by hand.
+
+fib(10) = 34
+fib(11) = 55
+fib(12) = 89
