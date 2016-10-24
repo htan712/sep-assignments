@@ -47,10 +47,7 @@ class BinarySearchTree
     # if target only has a left node
     elsif target.right.nil? && !target.left.nil?
       min = self.findMin(target.left)
-      temp = min.parent
-      temp.left == min ? temp.left = nil : temp.right = nil
-      target.parent.left == target ? target.parent.left = min : target.parent.right = min
-      target = min
+      swapTarget(min, target)
       if target.left
         target.left.parent = min
       end
@@ -59,10 +56,7 @@ class BinarySearchTree
 
     elsif target.left.nil? && !target.right.nil?
       min = self.findMin(target.right)
-      temp = min.parent
-      temp.left == min ? temp.left = nil : temp.right = nil
-      target.parent.left == target ? target.parent.left = min : target.parent.right = min
-      target = min
+      swapTarget(min, target)
       if target.right
         target.right.parent = min
       end
@@ -71,10 +65,7 @@ class BinarySearchTree
 
     elsif !target.left.nil? && !target.right.nil?
       min = self.findMin(target.right)
-      temp = min.parent
-      temp.left == min ? temp.left = nil : temp.right = nil
-      target.parent.left == target ? target.parent.left = min : target.parent.right = min
-      target = min
+      swapTarget(min, target)
       if !target.left.nil?
         target.left.parent = min
       end
@@ -106,5 +97,14 @@ class BinarySearchTree
       root = root.left
     end
     return root
+  end
+
+  private
+
+  def swapTarget(min, target)
+    min.parent.left == min ? min.parent.left = nil : min.parent.right = nil
+    target.parent.left == target ? target.parent.left = min : target.parent.right = min
+    target = min
+    return target
   end
 end
