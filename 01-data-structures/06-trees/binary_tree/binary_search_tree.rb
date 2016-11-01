@@ -76,7 +76,7 @@ class BinarySearchTree
   end
 
   # Recursive Breadth First Search
-  def printf(children=nil)
+  def printf(current=nil)
     current = self.root
     arr = [current]
     while arr[0] != nil

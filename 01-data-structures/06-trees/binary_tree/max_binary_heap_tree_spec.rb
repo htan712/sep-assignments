@@ -34,7 +34,23 @@ RSpec.describe MaxBinaryHeapTree, type: Class do
       tree.insert(root, pacific_rim)
       tree.insert(root, donnie)
       tree.insert(root, braveheart)
-      expect(root.left.left.title).to eq "Braveheart"
+      expect(root.left.left.title).to eq "Pacific Rim"
+    end
+
+    it "properly insert a node as a left right child" do
+      tree.insert(root, pacific_rim)
+      tree.insert(root, donnie)
+      tree.insert(root, braveheart)
+      tree.insert(root, jedi)
+      expect(root.left.right.title).to eq "Braveheart"
+    end
+
+    it "properly insert the biggest rating to root" do
+      tree.insert(root, pacific_rim)
+      tree.insert(root, donnie)
+      tree.insert(root, braveheart)
+      tree.insert(root, mad_max_2)
+      expect(root.title).to eq "Mad Max 2: The Road Warrior"
     end
   end
 
