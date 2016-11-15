@@ -1,0 +1,44 @@
+1.	Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that has O(2^n). An example would be:
+	
+	An algorithm of O(1) would be having to drive a mile in a single day vs. having to drive a mile than multiply by 2 to previous day mile for each consecutive day. Ex. 1, 2, 4, 8(4X2), 16(8x2), etc.
+
+	1 penny right now vs 1 penny (double every day) after 30 days
+
+2.	In plain English, what is the best case scenario for binary search?
+
+	Finding an item that is dead center in the array.
+
+3.	In plain English, what is the worst-case scenario for binary search?
+
+	The Worst-case scenario would be to go through all the items in the array.
+
+4.	In plain English, what is the bounded-case scenario for binary search?
+
+	The bounded-case scenario would be divide an conquer, continuing to eliminate half of the array until the item is found.
+
+5.	Create a graph using the data below. Here's a CSV with the values you'll need.
+
+6.	What's the asymptotic limit as n approaches infinity for the function defined by the values above?
+
+	f(n) = 2^n
+
+7.	What is the Big-O of an algorithm that has the data points above?
+
+	O(2^n)
+
+8.	Write a Ruby script that calculates and prints the input size to iterations for the worst-case similar to the graph above for linear search.
+
+	def iterate(n)
+		return 2**n
+	end
+	
+
+9.	Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
+
+
+10.	What is the Big-O of binary search?
+	O(n)
+11.	What is the Big-Ω of binary search?
+	O(log n)
+12.	What is the Big-Ө of binary search?
+	O(logn)
