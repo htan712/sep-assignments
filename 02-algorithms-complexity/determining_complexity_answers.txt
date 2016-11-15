@@ -1,0 +1,11 @@
+1. O(1) because despite what n is the function will run at a constant time that puts a string.
+
+2. O(n) The function will run n times base it has to loop through the whole entire n array.
+
+3. O(nl) This function has a running time of n * l, l being the number of elements in the subarray of n array.
+
+4. O(2^n) - In each call we are calling the function twice. 
+
+5. O(n) because it will loop n times in the while loop.
+
+6. O(nlogn) Merge sort is broken down in half at each level like a binary search till there's a single element, so the running time of this will be O(log n).  After it is broken down to single element, the time it takes to merge them back together takes constant time of c.  Since there are n elements, it will be cn.  If we combine these two process together, it is O(cn log n).  Since we ingore constant times in big o notation, we end up with O(nlogn).
