@@ -4,7 +4,7 @@
 
 3. O(nl) This function has a running time of n * l, l being the number of elements in the subarray of n array.
 
-4. O(2^n) - In each call we are calling the function twice. 
+4. O(2^n) - In each phase we are calling the function recursively twice. 
 
 5. O(n) because it will loop n times in the while loop.
 

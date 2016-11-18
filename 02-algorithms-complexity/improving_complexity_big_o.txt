@@ -1,0 +1,1 @@
+Both Version one and three are O(n^2) as it loop through two array(combined_array and sorted_array) to find the correct spot to insert the element.  Version two was changed to a merge sort, which has a running time of O(n log n), logn being the time it takes to break down an array in half to a single element and n for the time it takes to merge them back in correct order.
